@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class Ejercicio1 {
 
+	public static final String MENSAJE = "Número de divisores: ";
+
 	public static void main(String[] args) {
 		int numeroUsuario;
 		long numDivisores;
@@ -12,7 +14,7 @@ public class Ejercicio1 {
 		numeroUsuario = sc.nextInt();
 		numDivisores = primeDivisors(numeroUsuario);
 		
-		System.out.println("Número de divisores: " + numDivisores);
+		System.out.println(MENSAJE + numDivisores);
 		sc.close();
 	}
 
