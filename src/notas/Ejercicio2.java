@@ -77,6 +77,13 @@ public class Ejercicio2 {
 
 		media = media / contador;
 
+		menu(leer);
+
+		leer.close();
+	} // fin main
+
+	public static void menu(Scanner leer) {
+		int opcion;
 		System.out.println("Seleccione una opción");
 		System.out.println("1. Nota máxima");
 		System.out.println("2. Nota mínima");
@@ -96,8 +103,6 @@ public class Ejercicio2 {
 		default:
 			System.out.println("La opción introducida no es válida");
 		}
-
-		leer.close();
-	} // fin main
+	}
 
 } // fin clase
