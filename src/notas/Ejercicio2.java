@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class Ejercicio2 {
 	public static final int NOTA_MAXIMA = 10;
+	private static double max = 0;
+	private static double min = NOTA_MAXIMA;
+	private static double media = 0;
 
 	public static void main(String[] args) {
 		// Variable para guardar el nombre del alumno
@@ -22,9 +25,6 @@ public class Ejercicio2 {
 
 		// Opción para el menú
 		int opcion;
-
-		// Variables para la nota máxima, mínima y media
-		double max = 0, min = NOTA_MAXIMA, media = 0;
 
 		// Variable que cuenta los alumnos
 		int contador = 0;
@@ -61,8 +61,7 @@ public class Ejercicio2 {
 			double mediaPractica = notaPractica * PORCENTAJE_PRACTICA;
 			double mediaProblemas = notaProblemas * PORCENTAJE_PROBLEMAS;
 			double mediaTeoria = notaTeoria * PORCENTAJE_TEORIA;
-			notaFinal = mediaPractica + mediaProblemas
-					+ mediaTeoria;
+			notaFinal = mediaPractica + mediaProblemas + mediaTeoria;
 			System.out.println("La nota final de " + nombreAlumno + " es " + notaFinal);
 
 			if (notaFinal > max) {
@@ -74,7 +73,6 @@ public class Ejercicio2 {
 			media += notaFinal;
 			contador++;
 
-			
 		} // fin bucle
 
 		media = media / contador;
