@@ -3,6 +3,8 @@ package notas;
 import java.util.Scanner;
 
 public class Ejercicio2 {
+	public static final int NOTA_MAXIMA = 10;
+
 	public static void main(String[] args) {
 		// Variable para guardar el nombre del alumno
 		String nombreAlumno;
@@ -22,7 +24,7 @@ public class Ejercicio2 {
 		int opcion;
 
 		// Variables para la nota máxima, mínima y media
-		double max = 0, min = 10, media = 0;
+		double max = 0, min = NOTA_MAXIMA, media = 0;
 
 		// Variable que cuenta los alumnos
 		int contador = 0;
@@ -56,8 +58,11 @@ public class Ejercicio2 {
 				System.out.println("ERROR: alguna de las notas introducidas no es correcta");
 				continue;
 			}
-			notaFinal = notaPractica * PORCENTAJE_PRACTICA + notaProblemas * PORCENTAJE_PROBLEMAS
-					+ notaTeoria * PORCENTAJE_TEORIA;
+			double mediaPractica = notaPractica * PORCENTAJE_PRACTICA;
+			double mediaProblemas = notaProblemas * PORCENTAJE_PROBLEMAS;
+			double mediaTeoria = notaTeoria * PORCENTAJE_TEORIA;
+			notaFinal = mediaPractica + mediaProblemas
+					+ mediaTeoria;
 			System.out.println("La nota final de " + nombreAlumno + " es " + notaFinal);
 
 			if (notaFinal > max) {
