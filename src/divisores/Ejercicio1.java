@@ -5,17 +5,18 @@ import java.util.Scanner;
 public class Ejercicio1 {
 
 	public static final String MENSAJE = "Número de divisores: ";
+	private static Scanner lectura;
 
 	public static void main(String[] args) {
 		int numeroUsuario;
 		long numDivisores;
-		Scanner sc = new Scanner(System.in);
+		lectura = new Scanner(System.in);
 		
-		numeroUsuario = sc.nextInt();
+		numeroUsuario = lectura.nextInt();
 		numDivisores = primeDivisors(numeroUsuario);
 		
 		System.out.println(MENSAJE + numDivisores);
-		sc.close();
+		lectura.close();
 	}
 
 	private static long primeDivisors(long number) {
