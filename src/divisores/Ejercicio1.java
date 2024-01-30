@@ -1,4 +1,4 @@
-package refactor;
+package divisores;
 
 import java.util.Scanner;
 
