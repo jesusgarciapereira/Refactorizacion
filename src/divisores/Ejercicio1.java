@@ -23,8 +23,7 @@ public class Ejercicio1 {
 		int cont = 0;
 		
 		for(int i=2; i<=number; i++) {
-			boolean esDivisor = number%i==0;
-			if(esDivisor && isPrime(i)) {
+			if(number%i==0 && isPrime(i)) {
 				cont++;
 			}
 		}
