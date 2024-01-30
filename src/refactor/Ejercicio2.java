@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ejercicio2 {
 	public static void main(String[] args) {
 		// Variable para guardar el nombre del alumno
-		String alumno;
+		String nombreAlumno;
 
 		// Variables para guardar los distintos tipos de notas
 		int notaPractica, notaProblemas, notaTeoria;
@@ -32,9 +32,9 @@ public class Ejercicio2 {
 
 		while (true) {
 			System.out.println("Introduzca el nombre del alumno");
-			alumno = leer.next();
+			nombreAlumno = leer.next();
 
-			if (alumno.equals("0")) {
+			if (nombreAlumno.equals("0")) {
 				break;
 			}
 
@@ -58,7 +58,7 @@ public class Ejercicio2 {
 			}
 			notaFinal = notaPractica * PORCENTAJE_PRACTICA + notaProblemas * PORCENTAJE_PROBLEMAS
 					+ notaTeoria * PORCENTAJE_TEORIA;
-			System.out.println("La nota final de " + alumno + " es " + notaFinal);
+			System.out.println("La nota final de " + nombreAlumno + " es " + notaFinal);
 
 			if (notaFinal > max) {
 				max = notaFinal;
