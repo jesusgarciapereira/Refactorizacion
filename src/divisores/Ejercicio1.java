@@ -34,7 +34,8 @@ public class Ejercicio1 {
 	public static boolean esPrimo(int numero) {
 		boolean esPrimo = true;
 		for(int i=2; i<numero; i++) {
-			if(numero%i == 0) {
+			int modulo = numero%i;
+			if(modulo == 0) {
 				esPrimo = false;
 				break;
 			}
